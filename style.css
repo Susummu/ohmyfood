@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Devonshire&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+@font-face {
+    font-family: 'KGPrimaryItalics';
+    src: url('font/kgprimaryitalics.woff');
+
+}
 
 @keyframes Shake {
     10%, 90% {
@@ -147,23 +156,132 @@ footer ul li {
 
 /* Menu 1 */
 
+h2, h3, h4 {
+    font-size: 30px;
+    font-family: 'Devonshire', sans-serif;
+    color: #3d1319;
+}
+
 h2 {
     text-align: center;
-    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 70px;
     height: 144px;
     margin-bottom: 0;
     margin-top: 0;
     padding-top: 90px;
+    font-weight: 700;
+    
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    font-family: 'KGPrimaryItalics';
+}
+
+.contenant{
+    width: 1184px;
+    height: 1675px;
+    margin-top: 53px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 6px 4px rgba(237, 237, 237, 1);
+    background-color: #fde0dc;
 }
 
 .first-menu {
     display: flex;
     justify-content: center;
+    height: 190px;
 }
 
-.img {
-    height: 1674px;
-    width: 1184px;
-    margin-top: 53px;
-    box-shadow: 1px 1px 6px 4px rgba(237, 237, 237, 1);
+.fas {
+    padding-top: 88px;
+    background:-moz-linear-gradient(top, #f05160 0%, #f6916a 100%); 
+    background: -webkit-linear-gradient(top, #f05160 0%,#f6916a 100%); 
+    background: linear-gradient(to bottom, #f05160 0%,#f6916a 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    
+    -webkit-text-fill-color:transparent;
 }
+
+.titre h2 {
+    text-align: center;
+    padding-top: 0;
+    font-family: 'Devonshire', sans-serif;
+    color: #3d1319;
+}
+
+
+table {
+    width: 100%;
+    margin-bottom: 149px;
+}
+
+.entree, .plat, .dessert {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.entrees, .price, .plats, .desserts {
+    font-family: 'Kalam';
+    font-weight: lighter;
+    font-size: 28px;
+}
+
+.price {
+    font-weight: bolder;
+}
+
+
+.entrees, .plats, .desserts {
+    padding-left: 128px;
+}
+
+.price {
+    text-align: right;
+    padding-right: 128px;
+}
+
+
+
+.plat img:first-child {
+    margin-left: 30px;
+}
+
+.plat img:last-child {
+    margin-right: 30px;
+}
+
+.dessert img:first-child {
+    margin-left: 47px;
+}
+
+.dessert img:last-child {
+    margin-right: 40px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bottom i {
+    padding-top: 0;
+    font-size: 60px;
+}
+
+.bottom h4 {
+    margin: 0 14px;
+    font-size: 50px;
+    font-weight: lighter;
+
+}
+
