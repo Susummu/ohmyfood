@@ -23,6 +23,13 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
 
+/* FONTS MENU 4*/
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@font-face {
+    font-family: 'GelPen', 'GelPen light';
+    src: url('font/GelPen.woff'), url('font/GelPenLight.woff');
+}
+
 @keyframes Shake {
     10%, 90% {
         transform: translate3d(-2px, 0, 0);
@@ -325,7 +332,7 @@ table {
     font-size: 40px;
     font-family: "Croissant One", cursive;
     font-weight: 400;
-    background: linear-gradient(45deg, #df871e, #8f5bfe);
+    background: linear-gradient(90deg, #e38913, #6e4ccc );
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color:transparent;
@@ -333,7 +340,7 @@ table {
     padding-bottom: 186px;
 }
 
-.entreemenu_two, .platmenu_two, .dessertmenu_two, .entreemenu_tree, .platmenu_tree, .dessertmenu_tree {
+.entreemenu_two, .platmenu_two, .dessertmenu_two, .entreemenu_tree, .platmenu_tree, .dessertmenu_tree, .entreemenu_four, .platmenu_four, .dessertmenu_four {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -370,7 +377,7 @@ table {
     margin-bottom: 130px;
 }
 
-.price_tree, .price_four {
+.price_tree, .price_four, .price_five {
     text-align: end;
 }
 
@@ -401,11 +408,11 @@ table {
     background-color: #edefef;
 }
 
-.contenant-tree .header {
+.contenant-tree .header, .four {
     height: auto;
     font-size: 90px;
     font-family: 'Dancing Script', cursive;
-    font-weight: 400;
+    font-weight: lighter;
     background: linear-gradient(to right, #0342e5, #0889fb);
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -414,8 +421,8 @@ table {
     padding-bottom: 150px;
 }
 
-.entree_tree, .plat_tree, .dessert_tree, .entreemenu_tree h3, .platmenu_tree h3, .dessertmenu_tree h3, .price_four {
-    font-size: 35px;
+.entree_tree, .plat_tree, .dessert_tree, .entreemenu_tree h3, .platmenu_tree h3, .dessertmenu_tree h3, .price_four, .entree_four, .plat_four, .dessert_four, .entreemenu_four h3, .platmenu_four h3, .dessertmenu_four h3, .price_four, .price_five {
+    font-size: 34px;
     color: #000000;
     font-family: "Caveat", cursive;
     line-height: 46px;
@@ -424,6 +431,36 @@ table {
 .entrees_tree, .plats_tree, .desserts_tree {
     padding: 0 176px;
 }
+
+/* MENU 4 */
+
+.contenant-four {
+    width: 1184px;
+    height: 1675px;
+    margin-top: 53px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 6px 4px rgba(237, 237, 237, 1);
+    background-color: #fdfffd;
+}
+
+.four {
+    font-family: "Kaushan Script", cursive;
+    background: linear-gradient(to right, #41963c, #beff7f);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+.entrees_four, .plats_four, .desserts_four {
+    padding: 0 155px;
+}
+
+.price_five {
+    font-family: 'GelPen light', cursive;
+    font-weight: 100;
+}
+
 
 
 
