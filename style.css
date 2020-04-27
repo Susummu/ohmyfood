@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+/* FONTS MENU 1 */
+
 @import url('https://fonts.googleapis.com/css2?family=Devonshire&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
@@ -8,6 +11,17 @@
     src: url('font/kgprimaryitalics.woff');
 
 }
+
+/* FONTS MENU 2 */
+
+@import url('https://fonts.googleapis.com/css?family=Croissant+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+/* MENU 3 */
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
 
 @keyframes Shake {
     10%, 90% {
@@ -113,6 +127,7 @@ a {
     display: flex;
     width: 100%;
     height: 185px;
+    
 
 }
 
@@ -123,6 +138,8 @@ a {
     margin-left: auto;
     margin-right: auto;
     font-size: 75px;
+    border: none;
+    
 }
 
 footer { 
@@ -290,3 +307,129 @@ table {
 .underline:hover {
     background-size: 100% 100%;
 }
+
+/* MENU 2 */
+
+.contenant-two {
+    width: 1184px;
+    height: 1675px;
+    margin-top: 53px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 6px 4px rgba(237, 237, 237, 1);
+    background-color: #fff5fe;
+}
+
+.header {
+    height: auto;
+    font-size: 40px;
+    font-family: "Croissant One", cursive;
+    font-weight: 400;
+    background: linear-gradient(45deg, #df871e, #8f5bfe);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    padding-top: 200px;
+    padding-bottom: 186px;
+}
+
+.entreemenu_two, .platmenu_two, .dessertmenu_two, .entreemenu_tree, .platmenu_tree, .dessertmenu_tree {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.entreemenu_two h3, .platmenu_two h3, .dessertmenu_two h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: #c67412;
+}
+
+.entrees_two {
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    color: #c67412;
+    padding: 0 176px;
+    line-height: 44px;
+    margin-bottom: 130px;
+}
+
+.price_two {
+    text-align: end;
+}
+
+.platmenu_two h3, .plats_two {
+    color: #a56799;
+}
+
+.plats_two, .desserts_two {
+    font-size: 28px;
+    font-family: 'Playfair Display', serif;
+    padding: 0 176px;
+    line-height: 44px;
+    margin-bottom: 130px;
+}
+
+.price_tree, .price_four {
+    text-align: end;
+}
+
+.dessertmenu_two h3, .desserts_two {
+    color: #6e4ccc;
+}
+
+
+.underline_two, .underline_tree {
+    display: inline;
+    background: linear-gradient(to top, rgba(255, 215, 0, 1) 0%, rgba(255, 215, 0, 1) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+    transition: background-size 0.3s;
+}
+
+.underline_two:hover, .underline_tree:hover {
+    background-size: 100% 100%;
+}
+
+/* MENU 3 */
+
+.contenant-tree {
+    width: 1184px;
+    height: 1675px;
+    margin-top: 53px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 6px 4px rgba(237, 237, 237, 1);
+    background-color: #edefef;
+}
+
+.contenant-tree .header {
+    height: auto;
+    font-size: 90px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    background: linear-gradient(to right, #0342e5, #0889fb);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.entree_tree, .plat_tree, .dessert_tree, .entreemenu_tree h3, .platmenu_tree h3, .dessertmenu_tree h3, .price_four {
+    font-size: 35px;
+    color: #000000;
+    font-family: "Caveat", cursive;
+    line-height: 46px;
+}
+
+.entrees_tree, .plats_tree, .desserts_tree {
+    padding: 0 176px;
+}
+
+
+
+
+
+
+
+
+
