@@ -17,3 +17,5 @@
 # Rajout du menu 4.html
 
 # Rajout du style CSS pour la page 4
+
+# Refonte d'une partie de l'index (suppression des img par du texte), modification du style.css
