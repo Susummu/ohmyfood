@@ -120,7 +120,7 @@ a {
 
 .logo {  
     text-align: center;
-    font-size: 85px;
+    font-size: 72px;
     font-weight: 700;
     width: 100%;
     margin: 0;
@@ -132,7 +132,7 @@ a {
 /*        Mise en forme carte menu       */
 /*---------------------------------------*/
 
-.animate {
+.animate, .global {
     width: 536px;
     height: 759px;
     display: flex;
@@ -177,7 +177,7 @@ a {
 .uppercase{
     text-transform: uppercase;
     font-size: 50px;
-    margin-top: 30px;
+    margin-top: 0;
 }
 
 .second {
@@ -267,7 +267,6 @@ a {
 .zoom a, .zoom-2 a {
     max-width: 100%;
     transition: all .3s;
-    display: block;
     transform: scale(1);
 }
 
@@ -289,15 +288,14 @@ a {
 .bouton {
     background: #579c87;
     color: #fdcb46;
-    padding: 18px 10px;
     border-radius: 25px;
     margin: 0 auto;
-    margin-top: 30px;
     text-align: center;
     font-family: "roboto";
     font-size: 40px;
-    width: 400px;
-    height: 90px;
+    width: 380px;
+    height: 70px;
+    line-height: 70px;
 }
 
 .bouton::after {
@@ -403,7 +401,7 @@ h3 {
     height: auto;
 }
 
-.fas {
+.fal {
     padding-top: 40px;
     background: linear-gradient(to right, #f05160 0%,#f6916a 100%);
     -webkit-background-clip: text;
@@ -688,9 +686,6 @@ h3 {
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color:transparent;
-    padding-top: 110px;
-    padding-bottom: 76px;
-    padding-left: 7px;
 }
 
 .entree_tree, .plat_tree, .dessert_tree, .entreemenu_tree h3, .platmenu_tree h3, .dessertmenu_tree h3, .price_four, .entree_four, .plat_four, .dessert_four, .entreemenu_four h3, .platmenu_four h3, .dessertmenu_four h3, .price_four, .price_five {
@@ -824,8 +819,12 @@ h3 {
         margin-bottom: 10px;
     }
 
-    .zoom {
-        position: static;
+    .zoom, .zoom-2 {
+        position: relative;
+        overflow: hidden;
+        width: 536px;
+        height: 759px;
+        box-shadow: 1px 1px 6px 4px rgba(237,237,237,0.55);
         margin-top: 20px;
         margin-bottom: 10px;
     }
@@ -983,6 +982,16 @@ h3 {
         display: flex;
         justify-content: center;
     }
+
+    .zoom, .zoom-2 {
+        position: relative;
+        overflow: hidden;
+        width: 536px;
+        height: 759px;
+        box-shadow: 1px 1px 6px 4px rgba(237,237,237,0.55);
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 868px) {
@@ -1122,6 +1131,120 @@ h3 {
 
     .underline_two {
         margin-bottom: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 580px) {
+
+    #contener {
+        width: 100%;
+        height: 2130px;
+    }
+
+    .animate {
+        width: 280px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .zoom, .zoom-2 {
+        position: relative;
+        overflow: hidden;
+        width: 280px;
+        height: 400px;
+        box-shadow: 1px 1px 6px 4px rgba(237,237,237,0.55);
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .zoom a, .zoom-2 a {
+        max-width: 100%;
+        transition: all .3s;
+        transform: scale(1);
+    }
+    
+    .zoom:hover a {
+        transform: scale(1.2);
+        padding-bottom: 10px;
+    }
+    
+    .zoom-2:hover a {
+        transform: scale(1.2);
+        padding-bottom: 0;
+    }
+
+
+    .animate i{
+        font-size: 2em;
+    }
+
+    .first {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+        font-size: 35px;
+        margin-top: 15px;
+    }
+
+
+    .second {
+        font-size: 20px;
+        font-family: "Croissant One", cursive;
+        background:linear-gradient(90deg, #c67412 0%,#8f5bfe 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        margin-bottom: 0;
+    }
+    
+    .uppercase-2 {
+        font-size: 30px;
+        color: #c77412;
+        margin-top: 25px;
+    }
+
+    .third {
+        font-size: 30px;
+        font-family: "Dancing Script";
+        font-weight: lighter;
+        background: linear-gradient(to right, #0342e5, #0889fb);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        margin-bottom: 0px;
+        padding-left: 4px;
+    }
+    
+    .lowcase-3 {
+        font-family: "Dancing Script";
+        font-size: 40px;
+        color: #0887fb;
+        margin-top: 25px;
+    }
+    
+    .fourth {
+        font-size: 30px;
+        font-family: 'Kaushan Script', cursive;
+        background: linear-gradient(to right, #41963c, #beff7f);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        margin-bottom: 0;
+    }
+    
+    .lowcase-4 {
+        font-size: 40px;
+        color: #72bf56;
+        margin-top: 25px;
     }
 
 
