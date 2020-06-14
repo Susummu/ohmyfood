@@ -26,4 +26,6 @@
 
 # Modification du css pour les 2 parties précédente.
 
-# Modification du soulignement des menu 1 à 4 par les degradées des textex 
+# Modification du soulignement des menu 1 à 4 par les degradées des textes
+
+# Modification de l'animation "..." sur prochainement et le CSS qui va avec
