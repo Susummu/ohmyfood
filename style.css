@@ -44,29 +44,28 @@
         text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 #fdcb46;
     }
 
-  }
-  @keyframes points {
-    0%, 20% {
-        color: rgba(0, 0, 0, 0);
-        text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
 
-    40% {
-        color: #fdcb46;
-        text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
-    }
-
-    60% {
-        text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 rgba(0, 0, 0, 0);
+    50%{
+        opacity: .25;
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
     }
 
     100% {
-        text-shadow: 0.25em 0 0 #fdcb46, 0.5em 0 0 #fdcb46;
+        opacity: 0;
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
     }
-
-
 }
-  
+
 
 * {
     box-sizing: border-box;
@@ -98,6 +97,7 @@ header, #button, footer {
 ul {
     list-style: none;
 }
+
 
 a {
     text-decoration: none;
@@ -132,33 +132,38 @@ a {
 /*        Mise en forme carte menu       */
 /*---------------------------------------*/
 
-.animate, .global {
+.animate {
     width: 536px;
     height: 759px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
 }
 
 .one {
     background-color: #fcdfdb;
-    
+    justify-content: center;
+   
 }
 
 .two {
     background-color: #fff5fe;
     justify-content: center;
+    
 }
 
 .tree {
     background-color: #f9f9f9;
     justify-content: center;
+    
 }
 
 .four {
     background-color: #fdfffd;
     justify-content: center;
+    
 }
 
 
@@ -198,7 +203,7 @@ a {
 
 .third {
     font-size: 50px;
-    font-family: "Dancing Script";
+    font-family: 'Dancing Script', cursive;
     font-weight: lighter;
     background: linear-gradient(to right, #0342e5, #0889fb);
     -webkit-background-clip: text;
@@ -209,7 +214,7 @@ a {
 }
 
 .lowcase-3 {
-    font-family: "Dancing Script";
+    font-family: 'Dancing Script', cursive;
     font-size: 60px;
     color: #0887fb;
     margin-top: 25px;
@@ -218,15 +223,18 @@ a {
 .fourth {
     font-size: 50px;
     font-family: 'Kaushan Script', cursive;
+    font-weight: lighter;
     background: linear-gradient(to right, #41963c, #beff7f);
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -webkit-text-fill-color:transparent;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 0;
+    
 }
 
 .lowcase-4 {
-    font-size: 60px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
     color: #72bf56;
     margin-top: 25px;
 }
@@ -247,6 +255,10 @@ a {
     padding-left: 0;
 }
 
+.menu li{
+    box-shadow: 1px 1px 6px 4px rgba(237,237,237,0.55);
+}
+
 .menu li:nth-child(3), .menu li:last-child {
     margin-top: 90px;
     
@@ -261,23 +273,31 @@ a {
     overflow: hidden;
     width: 536px;
     height: 759px;
-    box-shadow: 1px 1px 6px 4px rgba(237,237,237,0.55);
+
 }
 
 .zoom a, .zoom-2 a {
     max-width: 100%;
     transition: all .3s;
     transform: scale(1);
+    -webkit-transition: all .3s;
+    -webkit-transform: scale(1);
+    
 }
 
 .zoom:hover a {
     transform: scale(1.2);
+    -webkit-transform: scale(1.2);
     padding-bottom: 10px;
+    border-top-color: transparent;
+    
 }
 
 .zoom-2:hover a {
     transform: scale(1.2);
+    -webkit-transform: scale(1.2);
     padding-bottom: 0;
+    border-top-color: transparent;
 }
 
 
@@ -298,11 +318,29 @@ a {
     line-height: 70px;
 }
 
-.bouton::after {
-    content: ".";
-	-webkit-animation: points 1.5s steps(3, end) 2s infinite both;
-	animation: points 1.5s steps(3, end) 2s infinite both;
+.bubble {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #FEC85F;
 }
+    
+.bubble-1 {
+    animation: pulse .7s ease 0s infinite alternate;
+    -webkit-animation: pulse .7s ease 0s infinite alternate;
+}
+    
+.bubble-2 {
+    animation: pulse .7s ease .2s infinite alternate;
+    -webkit-animation: pulse .7s ease .2s infinite alternate;
+}
+    
+.bubble-3 {
+    animation: pulse .7s ease .4s infinite alternate;
+    -webkit-animation: pulse .7s ease .4s infinite alternate;
+}
+
 
 /*---------------------------------------*/
 /* Mise en forme footer+ animation Shake */
@@ -488,9 +526,7 @@ h3 {
 
 
 
-.underline:hover {
-    background-size: 100% 100%;
-}
+
 
 /* MENU 2 */
 
@@ -520,6 +556,7 @@ h3 {
     margin: 0 auto;
     padding-top: 110px;
     padding-bottom: 76px;
+    padding-left: 6px;
 }
 
 .entreemenu_one, .platmenu_one, .dessertmenu_one,
@@ -603,7 +640,7 @@ h3 {
 }
 
 
-.underline_two::before {
+.underline_two::after {
     position: absolute;
     display: inline;
     content: '';
@@ -617,7 +654,7 @@ h3 {
     background:linear-gradient(-270deg, #c67412 0%,#8f5bfe 100%);
 }
 
-.underline_tree::before {
+.underline_tree::after {
     position: absolute;
     content: '';
     display: block;
@@ -630,7 +667,7 @@ h3 {
     background:linear-gradient(to top,  #0228dd 0%, #0889fb 100%);
 }
 
-.underline_four::before {
+.underline_four::after {
     position: absolute;
     content: '';
     display: block;
@@ -643,7 +680,7 @@ h3 {
     background: linear-gradient(-270deg, #489b40 0%, #beff7f 100%);
 }
 
-.underline:hover::after,.underline_two:hover::before, .underline_tree:hover::before, .underline_four:hover::before {
+.underline:hover::after,.underline_two:hover::after, .underline_tree:hover::after, .underline_four:hover::after {
     width: 100%;
     visibility: visible;
 }
@@ -680,7 +717,7 @@ h3 {
 
 .contenant-tree .header, .four {
     font-size: 70px;
-    font-family: "Dancing Script";
+    font-family: 'Dancing Script', cursive;
     font-weight: lighter;
     background: linear-gradient(to right, #0342e5, #0889fb);
     -webkit-background-clip: text;
@@ -709,7 +746,7 @@ h3 {
     width: 100%;
     text-align: center;
     font-size: 70px;
-    font-family: "Dancing Script";
+    font-family: 'Dancing Script', cursive;
     font-weight: lighter;
     background: linear-gradient(to right, #0342e5, #0889fb);
     -webkit-background-clip: text;
@@ -797,7 +834,6 @@ h3 {
         display: block;
         width: 100%;
         height: auto;
-        padding: 0 10px;
     }
 
     .menu {
@@ -845,12 +881,21 @@ h3 {
     }
 
 
+
+
     /* MENU 1 */
 
-    .contenant, .contenant-two, .contenant-tree, .contenant-four, .contenant-five {
+    .contenant, .contenant-two, .contenant-tree, .contenant-four {
         display: block;
         width: 100%;
         height: 1350px;
+        margin-top: 0;
+    }
+
+    .contenant-five {
+        display: block;
+        width: 100%;
+        height: auto;
         margin-top: 0;
     }
 
@@ -939,7 +984,7 @@ h3 {
         position: initial;
         display: block;
         margin-left: 0;
-        margin-top: 50px;
+        margin-top: 40px;
     }
 
     footer ul {
@@ -1060,87 +1105,13 @@ h3 {
 
 }
 
-@media screen and (max-width: 380px) {
 
-    header {
-        display: flex;
-        width: 100%;
-        height: 80px;
-    }
-
-    .logo {
-        width: 100%;
-        height: auto;
-        font-size: 45px;
-        height: 0;
-        padding-top: 20px;
-    }
-
-    .zoom {
-        width: 100%;
-        height: auto;
-    }
-
-    .bouton {
-        width: 80%;
-        height: auto;
-        font-size: 20px;
-    }
-
-    footer ul li {
-        font-size: 20px;
-        padding-top: 22px;
-    }
-
-    .no-style {
-        font-size: 25px;
-    }
-
-    .first-menu i {
-        font-size: 1em;
-    }
-
-    .titre h2 {
-        font-size: 20px;
-    }
-
-    .inline {
-        margin: 5px 10px;
-        width: 100%;
-    }
-
-    .inline h3 {
-        margin-bottom: 0;
-        font-size: 14px;
-    }
-
-    .entrees_two, .plats_two, .entrees_one, .plats_one, .desserts_one, .price, .entree_two, .plat_two, .dessert_two, .entreemenu_two h3, .platmenu_two h3, .dessertmenu_two h3, .entree_tree, .plat_tree, .dessert_tree, .entreemenu_tree h3, .platmenu_tree h3, .dessertmenu_tree h3, .price_four, .entree_four, .plat_four, .dessert_four, .entreemenu_four h3, .platmenu_four h3, .dessertmenu_four h3, .price_four, .price_five {
-        font-size: 14px;
-    }
-
-    .header, .footer-1 h4, .titre h2, .bottom h4 {
-        font-size: 20px;
-    }
-
-    .entreemenu_one, .platmenu_one, .dessertmenu_one, .entreemenu_two, .platmenu_two, .dessertmenu_two, .entreemenu_tree, .platmenu_tree, .dessertmenu_tree, .entreemenu_four, .platmenu_four, .dessertmenu_four {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .underline_two {
-        margin-bottom: 0;
-    }
-
-
-}
 
 @media screen and (max-width: 580px) {
 
     #contener {
         width: 100%;
-        height: 2130px;
+        height: 2100px;
     }
 
     .animate {
@@ -1200,6 +1171,7 @@ h3 {
         font-size: 20px;
         font-family: "Croissant One", cursive;
         background:linear-gradient(90deg, #c67412 0%,#8f5bfe 100%);
+        background: -webkit-linear-gradient(90deg, #e38913 0%, #6e4ccc 100%);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color:transparent;
@@ -1207,6 +1179,7 @@ h3 {
     }
     
     .uppercase-2 {
+        font-family: "Croissant One", cursive;
         font-size: 30px;
         color: #c77412;
         margin-top: 25px;
@@ -1214,7 +1187,7 @@ h3 {
 
     .third {
         font-size: 30px;
-        font-family: "Dancing Script";
+        font-family: 'Dancing Script', cursive;
         font-weight: lighter;
         background: linear-gradient(to right, #0342e5, #0889fb);
         -webkit-background-clip: text;
@@ -1225,7 +1198,7 @@ h3 {
     }
     
     .lowcase-3 {
-        font-family: "Dancing Script";
+        font-family: 'Dancing Script', cursive;
         font-size: 40px;
         color: #0887fb;
         margin-top: 25px;
@@ -1242,9 +1215,98 @@ h3 {
     }
     
     .lowcase-4 {
+        font-family: 'Kaushan Script', cursive;
         font-size: 40px;
         color: #72bf56;
         margin-top: 25px;
+    }
+
+
+}
+
+@media screen and (max-width: 380px) {
+
+
+    #contener {
+        width: 100%;
+        height: 2065px;
+    }
+    header {
+        display: block;
+        width: 100%;
+        height: 80px;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+        font-size: 45px;
+
+    }
+
+    .zoom {
+        width: 280px;
+        height: auto;
+    }
+
+    .bouton {
+        width: 80%;
+        height: auto;
+        font-size: 20px;
+    }
+
+    footer ul li {
+        font-size: 20px;
+        padding-top: 22px;
+    }
+
+    .no-style {
+        font-size: 25px;
+    }
+
+    .first-menu i {
+        font-size: 1em;
+    }
+
+    .titre h2 {
+        font-size: 20px;
+    }
+
+    .inline {
+        margin: 5px 10px;
+        width: 100%;
+    }
+
+    .inline h3 {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .entrees_two, .plats_two, .entrees_one, .plats_one, .desserts_one, .price, .entree_two, .plat_two, .dessert_two, .entreemenu_two h3, .platmenu_two h3, .dessertmenu_two h3, .entree_tree, .plat_tree, .dessert_tree, .entreemenu_tree h3, .platmenu_tree h3, .dessertmenu_tree h3, .price_four, .entree_four, .plat_four, .dessert_four, .entreemenu_four h3, .platmenu_four h3, .dessertmenu_four h3, .price_four, .price_five {
+        font-size: 14px;
+    }
+
+    .header, .footer-1 h4, .titre h2, .bottom h4 {
+        font-size: 20px;
+    }
+
+    .entreemenu_one, .platmenu_one, .dessertmenu_one, .entreemenu_two, .platmenu_two, .dessertmenu_two, .entreemenu_tree, .platmenu_tree, .dessertmenu_tree, .entreemenu_four, .platmenu_four, .dessertmenu_four {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .underline_two {
+        margin-bottom: 0;
+    }
+
+    .testons h2{
+        padding-top: 26px;
+    }
+
+    .contenant-five {
+        padding: 0 10px;
     }
 
 
