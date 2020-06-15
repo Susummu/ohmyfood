@@ -19,3 +19,13 @@
 # Rajout du style CSS pour la page 4
 
 # Refonte d'une partie de l'index (suppression des img par du texte), modification du style.css
+
+# Mise en place de la redirection des menu sur l'index (clicable sur tous le menu)
+
+# Modification du logo du 1er menu (icon)
+
+# Modification du css pour les 2 parties précédente.
+
+# Modification du soulignement des menu 1 à 4 par les degradées des textes
+
+# Modification de l'animation "..." sur prochainement et le CSS qui va avec
